@@ -3,12 +3,12 @@
 
 #include "stm32f4xx_hal.h"
 
-/* 硬件引脚定义 */
+/* 纭欢寮曡剼瀹氫箟 */
 #define IIC_GPIO_PORT    GPIOB
 #define IIC_SCL_PIN      GPIO_PIN_10
 #define IIC_SDA_PIN      GPIO_PIN_11
 
-/* 函数声明 */
+/* 鍑芥暟澹版槑 */
 void IIC_Init(void);
 void IIC_Start(void);
 void IIC_Stop(void);
@@ -22,12 +22,8 @@ int32_t IICwriteBytes(uint8_t dev, uint8_t reg, uint8_t* data, uint32_t length);
 void HWT101_Init();
 void HWT101_GetValue();
 
-/* 调试宏 */
-//#define I2C_DEBUG  // 取消注释启用调试输出
 
-
-
-//例程-------------------------------------------------------------------------------------------------
+//渚嬬▼-------------------------------------------------------------------------------------------------
 		/* USER CODE BEGIN 2 */
 
 					//	HWT101_Init();
@@ -36,6 +32,14 @@ void HWT101_GetValue();
 		/* USER CODE BEGIN 3 */
 					//		extern 	float fAcc[3], fGyro[3], fAngle[3];
 					//		HWT101_GetValue();
+
+					//		if (WitStartIYAWCali() != WIT_HAL_OK)  //璇绘暟缃浂
+					//		{
+					//			OLED_ShowString(3, 3, "Error");
+					//		
+					//		}else{
+					//			OLED_ShowString(5, 5, "ok");
+					//		}
 
 		/* USER CODE END 3 */
 
